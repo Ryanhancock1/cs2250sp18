@@ -28,11 +28,13 @@ int main()
     int age;
     printf("Do you like to code?:\n");
     scanf("%c", &input);
+
     printf("Enter your age:\n");
     scanf("%d", &age);
     printf("Your age is %d\n", age);
     printf("1)You entered [%c]\n", input);
     printf("Do you really like to code?:\n");
+    //Use an empty space before %c this will take care of previous enter
     scanf("%c %c", &dummy, &input);
     printf("2)You entered [%c]\n", input);
     printf("3)You entered [%c]\n", input);
