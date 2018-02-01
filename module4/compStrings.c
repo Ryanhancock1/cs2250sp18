@@ -41,7 +41,7 @@ int main()
     }
 // copy string
     strcpy(word2, word); // word2 = word
-    printf("[%s] and [%s]\n", word, word2);
+    printf("from [%s] and [%s]\n", word, word2);
 
     return 0;
 }
