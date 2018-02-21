@@ -31,7 +31,7 @@ int main()
     for(int i = 0; i < num1; i++)
     {
         printf("Enter weight %d:\n", i+1);
-        scanf(" %lf", &weight[i]);
+        scanf("%lf", &weight[i]);
     }
     printf("You entered:");
     for(int i = 0; i < num1; i++)
