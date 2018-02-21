@@ -33,7 +33,7 @@ int main()
         printf("Enter weight %d:\n", i+1);
         scanf(" %lf", &weight[i]);
     }
-    printf("You entered: ");
+    printf("You entered:");
     for(int i = 0; i < num1; i++)
     {
         printf(" %lf", weight[i]);
