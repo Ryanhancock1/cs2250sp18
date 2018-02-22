@@ -36,7 +36,7 @@ int main()
         scanf("%d", &jersey[i]);
         printf("Enter player %d's rating:\n", i+1);
         scanf("%d", &rating[i]);
-		printf("\n");
+	
     }
 printf("\nROSTER\n");
 for(int i = 0; i<PLAY; i++)
