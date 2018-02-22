@@ -37,7 +37,7 @@ int main()
         scanf("%d", &rating[i]);
 		printf("\n");
     }
-printf("\nROSTER\n");
+printf("ROSTER\n");
 for(int i = 0; i<PLAY; i++)
 {
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
