@@ -80,10 +80,10 @@ printf("MENU\n");
 				
 				break;
 			case 'o':
-				for(int i=0;i<5;i++)
-				{
-					printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
-				}
+			//	for(int i=0;i<5;i++)
+			//	{
+			//		printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
+			//	}
 				break;
 case 'q':
 break;
