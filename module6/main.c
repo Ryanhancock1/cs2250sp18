@@ -46,8 +46,7 @@ for(int i = 0; i<5; i++)
 }
 printf("\n");
 printf("MENU\n");
-    while(choice != 'q')
-	{
+
 		printf("u - Update player rating\n");
 		printf("a - Output players above a rating\n");
 		printf("r - Replace player\n");
@@ -92,7 +91,7 @@ default:
 printf("You have enter wrong choice\n");
 break;
 						}
-						}
+						
 int search(int jersey[], int n)
 {
 	int i;
