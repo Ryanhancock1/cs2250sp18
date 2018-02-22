@@ -18,45 +18,94 @@
 #include <stdio.h>
 
 // Constants
-const int num1 = 5;
-// Function Prototypes
 
+// Function Prototypes
+void display(int jersey[], int rating[], int n);
 // Main Function
 int main()
 {
-    double weight[num1];
-    double total= 0;
-    double avg, max=0;
-    // double  total = 0, avg, max;
-    for(int i = 0; i < num1; i++)
-    {
-        printf("Enter weight %d:\n", i+1);
-        scanf("%lf", &weight[i]);
-    }
-    printf("You entered: ");
-    for(int i = 0; i < num1; i++)
-    {
-        printf("%lf ", weight[i]);
-    }
-    printf("\n");
-    printf("\n");
-    for(int i = 0; i < num1; i++)
-    {
-        total = total + weight[i];
-    }
-    printf("Total weight: %lf\n", total);
-    avg = total / num1;
-    printf("Average weight: %lf\n", avg);
-    for(int i = 0; i < num1; i++)
-    {
-        if(weight[i]>max)
-        {
-            max=weight[i];
-        }
-    }
-    printf("Max weight: %lf\n", max);
+    char choice = ' ';
+    int jersey[5];
+    int rating[5];
+    int j=0,r=0;
 
+    for(int i = 0; i<5; i++)
+    {
+        printf("Enter player's %d jersey number:\n", i+1);
+        scanf("%d", &j);
+        jersey[i] = j;
+        printf("Enter player's %d rating:\n", i+1);
+        scanf("%d", &r);
+        rating[i]=r;
+    }
 
+    while(choice != 'q')
+	{
+		printf("u- Update player rating\n");
+		printf("a- Output player above rating\n");
+		printf("r- Replace\n");
+		printf("o- Output roster\n");
+		printf("q- Quit\n");
+		printf("Enter your choice(u,a,r,o,q):\n");
+		scanf(" %c", &choice);
+
+		switch(choice)
+		{
+			case 'u':
+				printf("Enter jersey number:\n");
+				scanf("%d", &j);
+				printf("Enter a new rating for a player:\n");
+				scanf("%d", &r);
+				
+				break;
+			case 'a':
+				printf("Enter a rating:\n");
+				scanf("%d",&r);
+				break;
+			case 'r':
+				printf("Enter jersey number:");
+				scanf("%d",&j);
+				printf("Enter a new jersey number:");
+				scanf("%d",&j);
+				
+				printf("Enter a rating of new player:");
+				scanf("%d",&r);
+				
+				break;
+			case 'o':
+				for(int i=0;i<5;i++)
+				{
+					printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
+				}
+				break;
+case 'q':
+break;
+default:
+printf("You have enter wrong choice\n");
+break;
+						}
+						}
+int search(int jersey[], int n)
+{
+	int i;
+	for(i=0;i<5;i++)
+	{
+		if(jersey[i] == n)
+			break;
+	}
+	return i;
+}
+    
+void display(int jersey[], int rating[], int n)
+{
+	for(int i = 0; i<5;i++)
+	{
+		if(rating[i]>= n)
+		{
+			printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
+		}
+	}
+}
 
     return 0;
 }
