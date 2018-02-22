@@ -31,14 +31,19 @@ int main()
 
     for(int i = 0; i<5; i++)
     {
-        printf("Enter player's %d jersey number:\n", i+1);
+        printf("Enter player %d's jersey number:\n", i+1);
         scanf("%d", &j);
         jersey[i] = j;
-        printf("Enter player's %d rating:\n", i+1);
+        printf("Enter player %d's rating:\n", i+1);
         scanf("%d", &r);
         rating[i]=r;
+		printf("\n");
     }
-
+printf("ROSTER\n");
+for(int i = 0; i<5; i++)
+{
+	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
+}
     while(choice != 'q')
 	{
 		printf("u- Update player rating\n");
