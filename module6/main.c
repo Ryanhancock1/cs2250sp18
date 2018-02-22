@@ -21,7 +21,6 @@
 const int PLAY = 5;
 
 // Function Prototypes
-void display(int jersey[], int rating[], int n);
 // Main Function
 int main()
 {
@@ -36,9 +35,9 @@ int main()
         scanf("%d", &jersey[i]);
         printf("Enter player %d's rating:\n", i+1);
         scanf("%d", &rating[i]);
-	
+		printf("\n");
     }
-printf("ROSTER\n");
+printf("\nROSTER\n");
 for(int i = 0; i<PLAY; i++)
 {
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
