@@ -70,20 +70,21 @@ printf("MENU\n");
 				scanf("%d",&r);
 				break;
 			case 'r':
-				printf("Enter jersey number:");
+				printf("Enter jersey number:\n");
 				scanf("%d",&j);
-				printf("Enter a new jersey number:");
+				printf("Enter a new jersey number:\n");
 				scanf("%d",&j);
 				
-				printf("Enter a rating of new player:");
+				printf("Enter a rating of new player:\n");
 				scanf("%d",&r);
 				
 				break;
 			case 'o':
-			//	for(int i=0;i<5;i++)
-			//	{
-			//		printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
-			//	}
+				printf("ROSTER\n");
+				for(int i=0;i<5;i++)
+				{
+					printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
+				}
 				break;
 case 'q':
 break;
