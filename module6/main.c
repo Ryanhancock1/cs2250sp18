@@ -38,7 +38,7 @@ int main()
         scanf("%d", &rating[i]);
 		printf("\n");
     }
-printf("ROSTER\n");
+printf("\nROSTER\n");
 for(int i = 0; i<PLAY; i++)
 {
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
@@ -60,8 +60,7 @@ printf("\nMENU\n");
 		{
 			case 'u':
 				{
-				
-				printf("Enter jersey number:\n");
+				printf("Enter a jersey number:\n");
 				scanf("%d", &num);
 				for(int i = 0; i < PLAY; i++)
 				{
@@ -77,20 +76,19 @@ printf("\nMENU\n");
 				{
 				printf("Enter a rating:\n");
 				scanf("%d",&num);
-				printf("ABOVE %d\n", num);
+				printf("\nABOVE %d\n", num);
 				for(int i = 0; i< PLAY; i++)
 				{
-					if(num< rating[i])
+					if(num < rating[i])
 					{
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 					}
-					printf("\n");
 				}
 				}
 				break;
 			case 'r':
 				{
-				printf("Enter jersey number:\n");
+				printf("Enter a jersey number:\n");
 				scanf("%d",&num);
 				printf("Enter a new jersey number:\n");
 				scanf("%d",&new);
