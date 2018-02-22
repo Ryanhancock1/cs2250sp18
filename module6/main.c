@@ -45,6 +45,8 @@ for(int i = 0; i<5; i++)
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 }
 printf("\n");
+while(choice != 'q')
+{
 printf("MENU\n");
 
 		printf("u - Update player rating\n");
@@ -92,7 +94,7 @@ default:
 printf("You have enter wrong choice\n");
 break;
 						}
-						
+}
 int search(int jersey[], int n)
 {
 	int i;
