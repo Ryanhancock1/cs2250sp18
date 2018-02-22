@@ -43,10 +43,9 @@ for(int i = 0; i<PLAY; i++)
 {
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 }
-printf("\n");
 while(choice != 'q')
 {
-printf("MENU\n");
+printf("\nMENU\n");
 
 		printf("u - Update player rating\n");
 		printf("a - Output players above a rating\n");
@@ -78,13 +77,14 @@ printf("MENU\n");
 				{
 				printf("Enter a rating:\n");
 				scanf("%d",&num);
-				printf("\nABOVE %d\n", num);
+				printf("ABOVE %d\n", num);
 				for(int i = 0; i< PLAY; i++)
 				{
 					if(num< rating[i])
 					{
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 					}
+					printf("\n");
 				}
 				}
 				break;
@@ -108,7 +108,7 @@ printf("MENU\n");
 				break;
 			case 'o':
 				{
-				printf("ROSTER\n");
+				printf("\nROSTER\n");
 				for(int i=0;i<PLAY;i++)
 				{
 					printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
