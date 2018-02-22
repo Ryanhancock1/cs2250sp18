@@ -44,14 +44,17 @@ for(int i = 0; i<5; i++)
 {
 	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 }
+printf("\n");
+printf("MENU\n");
     while(choice != 'q')
 	{
-		printf("u- Update player rating\n");
-		printf("a- Output player above rating\n");
-		printf("r- Replace\n");
-		printf("o- Output roster\n");
-		printf("q- Quit\n");
-		printf("Enter your choice(u,a,r,o,q):\n");
+		printf("u - Update player rating\n");
+		printf("a - Output players above a rating\n");
+		printf("r - Replace player\n");
+		printf("o - Output roster\n");
+		printf("q - Quit\n");
+		printf("\n");
+		printf("Choose an option:\n");
 		scanf(" %c", &choice);
 
 		switch(choice)
