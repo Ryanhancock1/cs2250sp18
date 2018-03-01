@@ -44,35 +44,35 @@ for(int i = 0; i<PLAY; i++)
 }
 while(choice != 'q')
 {
-printf("\nMENU\n");
+	printf("\nMENU\n");
 
-		printf("u - Update player rating\n");
-		printf("a - Output players above a rating\n");
-		printf("r - Replace player\n");
-		printf("o - Output roster\n");
-		printf("q - Quit\n");
-		printf("\n");
-		printf("Choose an option:\n");
-		scanf(" %c", &choice);
+	printf("u - Update player rating\n");
+	printf("a - Output players above a rating\n");
+	printf("r - Replace player\n");
+	printf("o - Output roster\n");
+	printf("q - Quit\n");
+	printf("\n");
+	printf("Choose an option:\n");
+	scanf(" %c", &choice);
 
-		switch(choice)
-		{
-			case 'u':
-				{
+	switch(choice)
+	{
+		case 'u':
+			{
 				printf("Enter a jersey number:\n");
 				scanf("%d", &num);
 				for(int i = 0; i < PLAY; i++)
 				{
 					if(num == jersey[i])
 					{
-				printf("Enter a new rating for a player:\n");
-				scanf("%d", &rating[i]);
+						printf("Enter a new rating for a player:\n");
+						scanf("%d", &rating[i]);
 					}
 				}
-				}
-				break;
-			case 'a':
-				{
+			}
+			break;
+		case 'a':
+			{
 				printf("Enter a rating:\n");
 				scanf("%d",&num);
 				printf("\nABOVE %d\n", num);
@@ -80,13 +80,13 @@ printf("\nMENU\n");
 				{
 					if(num < rating[i])
 					{
-	printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
+						printf("Player %d -- Jersey number: %d, Rating: %d\n", i+1, jersey[i], rating[i]);
 					}
 				}
-				}
-				break;
-			case 'r':
-				{
+			}
+			break;
+		case 'r':
+			{
 				printf("Enter a jersey number:\n");
 				scanf("%d",&num);
 				printf("Enter a new jersey number:\n");
@@ -96,25 +96,25 @@ printf("\nMENU\n");
 					if(num == jersey[i])
 					{
 						jersey[i] = new;
-				printf("Enter a rating for the player:\n");
-				scanf("%d",&rating[i]);
+						printf("Enter a rating for the player:\n");
+						scanf("%d",&rating[i]);
 					}
 				}
-		}
-				
-				break;
-			case 'o':
-				{
+			}
+
+			break;
+		case 'o':
+			{
 				printf("\nROSTER\n");
 				for(int i=0;i<PLAY;i++)
 				{
 					printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,jersey[i],rating[i]);
 				}
-				}
-				break;
-case 'q':
-break;
-						}
+			}
+			break;
+		case 'q':
+			break;
+	}
 }
 
 }
