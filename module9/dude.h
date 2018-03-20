@@ -36,5 +36,6 @@ void ShowInfo(int age, double weight);
 //makes it read only
 void ShowInfoStruct(const SuperDude* sd);
 void InitInfoStruct(SuperDude* sd);
+SuperDude CopyInfoStruct(const SuperDude* sd);
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 
