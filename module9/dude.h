@@ -32,6 +32,9 @@ typedef struct SuperDude
 
 // Function Prototypes
 void ShowInfo(int age, double weight);
-void ShowInfoStruct(SuperDude sd);
+//pass a const address
+//makes it read only
+void ShowInfoStruct(const SuperDude* sd);
+void InitInfoStruct(SuperDude* sd);
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 

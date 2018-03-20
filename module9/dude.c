@@ -39,12 +39,27 @@ void ShowInfo(int age,double weight)
  *  Description:  display super dude info
  * =====================================================================================
  */
-void ShowInfoStruct(SuperDude sd)
+void ShowInfoStruct(const SuperDude* sd)
 {
-    printf("Your age is [%d]\n", sd.age);
-    printf("Your weight is [%.2lf]\n",sd.weight);
-    printf("Your sex is %c \n", sd.sex);
+    printf("Your age is [%d]\n", sd->age);
+    printf("Your weight is [%.2lf]\n",sd->weight);
+    printf("Your sex is %c \n", sd->sex);
 
     return;
 }
 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  Initinfostruct
+ *  Description:  initialize values of super dude struct
+ * =====================================================================================
+ */
+void InitInfoStruct(SuperDude* sd)
+{
+    // when using an adress struct use arrows vs dots
+    sd->age = -99;
+    sd->weight = -99.0;
+    sd->sex = 'N';
+
+    return;
+}
