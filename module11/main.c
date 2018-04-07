@@ -91,7 +91,18 @@ void PrintMenu(char playlistTitle[])
                 printf("\n");
 
                 // Create a new node for playlist
-                // .....
+                if(headNode == NULL)
+                {
+                    headNode = (PlaylistNode*)malloc(sizeof(PlaylistNode));
+                    CreatePlaylistNode(headNode, uniqueID, songName, artistName, songLength, NULL);
+                }
+                else
+                {
+                    currNode = (PlaylistNode*)malloc(sizeof(PlaylistNode));
+                    CreatePlaylistNode(headNode, uniqueID, songName, artistName, songLength, NULL);
+                    InsertPlaylistNodeAfter(tailNode, currNode);
+                    tailNode = currNode;
+                }
 
 
                 // If song is first in playlist, update head/tail
@@ -103,6 +114,7 @@ void PrintMenu(char playlistTitle[])
             case 'r':
                 // Output playlist messaging
                 printf("REMOVE SONG\n");
+
                 printf("Enter song's unique ID:\n");
                 scanf("%s", uniqueID);
 
