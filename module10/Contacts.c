@@ -30,7 +30,7 @@ printf("Error!! Memory Allocation not allowed!!!");
 exit(0);
 }
 strcpy(ptr->contactName,name); 
-strcpy(ptr->contactPhoneNumhone);
+strcpy(ptr->contactPhoneNum,phone);
 ptr->nextNodePtr=NULL; //initially next pointer point to NULL
 return(ptr);
 }
@@ -42,12 +42,12 @@ struct ContactNode* temp; //temporary node
 //if list is empty then create a new node with name and phone number, and return first node in linked list
 if(ptr==NULL)
 {
-ptr=CreateContactNode(temp,namehone);
+ptr=CreateContactNode(temp,name, phone);
 return(ptr);
 }
 else // if list is not empty then create a new node and link this node to previous node in the linked list
 {
-    temp=CreateContactNode(temp,namehone);
+    temp=CreateContactNode(temp,name, phone);
 ptr->nextNodePtr=temp; //link temp node to the previous(ptr) node in the list
 }
 return(temp);
