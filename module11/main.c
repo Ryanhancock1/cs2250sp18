@@ -100,6 +100,7 @@ void PrintMenu(char playlistTitle[])
                 {
                     headNode = (PlaylistNode*)malloc(sizeof(PlaylistNode));
                     CreatePlaylistNode(headNode, uniqueID, songName, artistName, songLength, NULL);
+                    tailNode = headNode;
                 }
                 else
                 {
