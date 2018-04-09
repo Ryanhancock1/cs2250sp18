@@ -36,9 +36,14 @@ void PrintMenu(char playlistTitle[])
     int songPosition = 0;
     int newPosition = 0;
     int totalTime = 0;
+    int songNumber;
     // IF you follow this template, you will use 
     // at least all these pointers
     //PlaylistNode* newSong = NULL;
+    PlaylistNode* wasAfterNode = NULL;
+    PlaylistNode* newAfterNode = NULL;
+    PlaylistNode* wasBeforeNode = NULL;
+    PlaylistNode* newBeforeNode = NULL;
     PlaylistNode* currNode = NULL;
     PlaylistNode* songNode = NULL;
     //PlaylistNode* prevNode = NULL;
