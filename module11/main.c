@@ -140,7 +140,7 @@ void PrintMenu(char playlistTitle[])
                         {
                             currNode->nextNodePtr = songNode->nextNodePtr;
                         }
-                        printf("\"%s\" removed.\n\n");
+                        printf("\"%s\" removed.\n\n",songNode->songName);
                         free(songNode);
                     }
                     else
