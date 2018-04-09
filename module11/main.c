@@ -47,7 +47,7 @@ void PrintMenu(char playlistTitle[])
     PlaylistNode* currNode = NULL;
     PlaylistNode* songNode = NULL;
     //PlaylistNode* prevNode = NULL;
-    PlaylistNode* insertPosNode = NULL;
+   // PlaylistNode* insertPosNode = NULL;
     PlaylistNode* headNode = NULL;
     PlaylistNode* tailNode = NULL;
     PlaylistNode* currPrintNode = NULL;
@@ -189,7 +189,7 @@ void PrintMenu(char playlistTitle[])
                  {
                      if(songNumber == songPosition -1)
                      {
-                         wasBeforeNOde = currNode;
+                         wasBeforeNode = currNode;
                          songNode = currNode->nextNodePtr;
                      }
                      if((songPosition > newPosition) && (songNumber == newPosition - 1))
@@ -197,7 +197,7 @@ void PrintMenu(char playlistTitle[])
                          newBeforeNode = currNode;
                          newAfterNode = currNode->nextNodePtr;
                      }
-                     if((songPosition < newPosition) && (songNUmber == newPosition))
+                     if((songPosition < newPosition) && (songNumber == newPosition))
                      {
                          newBeforeNode = currNode;
                          if(currNode->nextNodePtr != NULL)
