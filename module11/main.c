@@ -160,74 +160,60 @@ void PrintMenu(char playlistTitle[])
                 scanf("%d", &newPosition);
 
                 // Count number of nodes in list
-                // .....
 
-                // songNode is the song to be moved
-                // .....
+                currNode = headNode;
 
-                if (songNode == NULL) 
+                if (songPosition == 1) 
                 {
-                    // ERROR: songPosition provided by user is invalid
-                    // Do nothing
+                    songNode = currNode;
+                    wasAfterNode = currNode->nextNodePtr;
+                    headNode = wasAfterNode;
+                    currNode = currNode->nextNodePtr;
+                    songNumber = 2;
                 }
                 else 
                 {
-
-                    // STEP 1: Remove song at songPosition from list. Keep reference to that song.
-
-                    // If songPosition is 1, list head is removed
-                    if (songNode == headNode) 
-                    {
-                        headNode = GetNextPlaylistNode(songNode);
-                    }
-                    else 
-                    {
-                        // prevNode refers to node before the songNode
-                        // .....
-
-
-                        // prevNode updated so next is the node following songNode
-                        // .....
-                    }
-
-                    // STEP 2: Insert song at newPosition
-
-                    // Insert songNode at head or if user position is before head
-                    if (newPosition <= 1) 
-                    {
-                        SetNextPlaylistNode(songNode, headNode);
-                        headNode = songNode;
-
-                        printf("\"%s\" moved to position 1\n\n", songNode->songName);
-
-                    }
-                    else 
-                    {
-                        // insertPosNode refers to the node before the location songNode is inserted
-                        // .....
-
-
-                        // Insert songNode to new location
-                        if (insertPosNode == NULL) 
-                        {
-                            InsertPlaylistNodeAfter(tailNode, songNode);
-                            tailNode = songNode;
-                            newPosition = numNodes + 1;
-                        }
-                        else
-                        {
-                            // .....
-                        }
-
-                        if (tailNode == insertPosNode) 
-                        {
-                            tailNode = songNode;
-                        }
-
-                        printf("\"%s\" moved to position %d\n\n",
-                                songNode->songName, newPosition);
-                    }
+                    songNumber = 1;
                 }
+
+                 if (newPosition == 1)
+                {
+                    newAfterNode = currNode;
+                }
+                 while (currNode != NULL)
+                 {
+                     if(songNumber == songPosition -1)
+                     {
+                         wasBeforeNOde = currNode;
+                         songNode = currNode->nextNodePtr;
+                     }
+                     if((songPosition > newPosition) && (songNumber == newPosition - 1))
+                     {
+                         newBeforeNode = currNode;
+                         newAfterNode = currNode->nextNodePtr;
+                     }
+                     if((songPosition < newPosition) && (songNUmber == newPosition))
+                     {
+                         newBeforeNode = currNode;
+                         if(currNode->nextNodePtr != NULL)
+                         {
+                             newAfterNode = currNode ->nextNodePtr;
+                         }
+                     }
+                     currNode = currNode->nextNodePtr;
+                     songNumber++;
+                 }
+                 songNode->nextNodePtr = newAfterNode;
+                 if (newPosition == 1)
+                 {
+                     headNode = songNode;
+                 }
+                 else 
+                    {
+                        newBeforeNode -> nextNodePtr = songNode;
+                    }
+                 wasBeforeNode->nextNodePtr = wasAfterNode;
+                        printf("\"%s\" moved to position %d\n\n", songNode->songName, newPosition);
                 break;
 
 
@@ -241,8 +227,20 @@ void PrintMenu(char playlistTitle[])
                 artistName[strlen(artistName)-1] = '\0';
 
                 // Search list for matching artists
-                // ....
-                // ....
+                
+                currNode = headNode;
+                songNumber = 1;
+                while(currNode != NULL)
+                {
+                    if(strcmp(artistName, currNode->artistName)==0)
+                    {
+                        printf("%d.\n", songNumber);
+                        PrintPlaylistNode(currNode);
+                        printf("\n");
+                    }
+                    currNode = GetNextPlaylistNode(currNode);
+                    songNumber ++;
+                }
                 break;
 
 
