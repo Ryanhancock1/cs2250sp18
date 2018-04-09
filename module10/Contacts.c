@@ -38,16 +38,16 @@ return(ptr);
 //InsertContactAfter() inserts a new node after node
 struct ContactNode* InsertContactAfter(struct ContactNode* ptr,char name[], char phone[]) /*insert a new node after node*/
 {
-struct ContactNode* temp; //temporary node
+struct ContactNode* temp=NULL; //temporary node
 //if list is empty then create a new node with name and phone number, and return first node in linked list
 if(ptr==NULL)
 {
-ptr=CreateContactNode(temp,name, phone);
+ptr = CreateContactNode(temp,name,phone);
 return(ptr);
 }
 else // if list is not empty then create a new node and link this node to previous node in the linked list
 {
-    temp=CreateContactNode(temp,name, phone);
+    temp = CreateContactNode(temp,name, phone);
 ptr->nextNodePtr=temp; //link temp node to the previous(ptr) node in the list
 }
 return(temp);
@@ -62,7 +62,7 @@ return ptr->nextNodePtr; //Return location pointed by nextNodePtr
 //PrintContactNode() print nodes
 void PrintContactNode(struct ContactNode* ptr)
 {
-printf("\nName: %s\n"tr->contactName);
-printf("Phone number: %s\n"tr->contactPhoneNum);
+printf("\nName: %s\n",ptr->contactName);
+printf("Phone number: %s\n",ptr->contactPhoneNum);
 }
 

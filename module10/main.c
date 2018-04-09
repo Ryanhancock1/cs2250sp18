@@ -23,7 +23,7 @@ int main()
 {
 struct ContactNode*root;
 struct ContactNode*temp;
-int i:
+int i;
 // name & phone
 char nm[50],phnum[50];
 for(i = 1; i<=3;i++)
