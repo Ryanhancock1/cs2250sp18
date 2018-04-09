@@ -120,38 +120,33 @@ void PrintMenu(char playlistTitle[])
 
                 // Count number of nodes in list
                 songNode = headNode;
-
-                // songNode is the song to be deleted
-                // .....
-
-
-                if (songNode == NULL) 
+                currNode = NULL;
+                int i = 0;
+                do
                 {
-                    // ERROR: uniqueID provided by user is invalid
-                    // Do nothing
-                }
-                else 
-                {
-                    // Remove song at songPosition from list
-
-                    // If songPosition is 1, list head is removed
-                    if (songNode == headNode) 
+                    if (strcmp(songNode->uniqueID, uniqueID) == 0)
                     {
-                        headNode = GetNextPlaylistNode(songNode);
+                        i = 1;
+                        if(songNode == headNode)
+                        {
+                            headNode = songNode->nextNodePtr;
+                        }
+                        else
+                        {
+                            currNode->nextNodePtr = songNode->nextNodePtr;
+                        }
+                        printf("\"%s\" removed.\n\n");
+                        free(songNode);
                     }
-                    else 
+                    else
                     {
-                        // prevNode refers to node before the songNode
-                        // .....
+                        currNode = songNode;
+                        songNode = songNode->nextNodePtr;
 
-                        // prevNode updated so next is the node following songNode
-                        // .....
+                    }
+                }while((i == 0) && (songNode != NULL));
 
-                    } // end of else
-
-                    printf("\"%s\" removed.\n\n", songNode->songName);
-                } // end of else
-
+                i = 0;
                 break;
 
 
