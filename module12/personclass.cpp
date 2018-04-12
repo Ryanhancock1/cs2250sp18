@@ -17,41 +17,42 @@
  */
 //#include <stdio.h> //for c
 #include <iostream> //for c++
+#include "PersonClass.h"
 using namespace std; //for c++
 
-// Constants
-class Person
-{
-    private:
-        int age;
-        string name;
-        double weight;
-    public:
-        void SetAge(int a);
-        int GetAge();
-        void SetName(string n);
-        string GetName();
-        void SetWeight(double w);
-        double GetWeight();
-};
 
 // Function Prototypes
 
 // Main Function
-int main()
+//constructor
+Person::Person()
 {
-    Person p1;
-    p1.SetAge(21);
-    p1.SetName("Ryan");
-    p1.SetWeight(200.0);
-    cout<<"Name "<<p1.GetName()<<endl;
-    cout<<"Age "<<p1.GetAge()<<endl;
-    cout<<"Weight "<<p1.GetWeight()<<endl;
-    
-
-    return 0;
+     age = 0;
+     name = "None";
+     weight = 0.0;
+    return;
 }
+
 // Function Definitions
+
+Person::Person(int a, string n, double w)
+{
+    age = a;
+    name = n;
+    weight = w;
+    return;
+}
+
+void Person::ShowInfo() const
+{
+    //"this" operator is an alias to the object itself
+    cout<<"Name "<<this->name<<endl;
+    cout<<"Age "<<this->age<<endl;
+    cout<<"Weight "<<this->weight<<endl;
+
+    return ;
+    
+}
 
 void Person::SetAge(int a)
 {
@@ -81,3 +82,13 @@ double Person::GetWeight()
     return weight;
 }
 
+Person Person::operator+(Person rhs)
+{
+    Person tmp;
+    //Add elements
+    tmp.age = age + rhs.age;
+    tmp.name = name + " " + rhs.name;
+    tmp.weight = weight + rhs.weight;
+
+    return tmp;
+}
