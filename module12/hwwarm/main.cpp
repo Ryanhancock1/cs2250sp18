@@ -20,6 +20,7 @@
 using namespace std; //for c++
 #include <string>
 #include "ItemToPurchase.h"
+#include "ShoppingCart.h"
 // Constants
 
 // Function Prototypes
