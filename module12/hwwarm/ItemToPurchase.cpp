@@ -21,27 +21,29 @@ using namespace std; //for c++
 #include "ItemToPurchase.h"
 // Function Definitions
 ItemToPurchase::ItemToPurchase(){
-    this->itemName="none";
-    this->itemPrice=0;
-    this->itemQuantity=0;
+    itemName="none";
+    itemPrice=0;
+    itemQuantity=0;
     return;
 }
 void ItemToPurchase::SetName(string name){
-    this->itemName=name;
+    itemName=name;
+    return;
 }
 string ItemToPurchase::GetName(){
     return itemName;
 }
 
 void ItemToPurchase::SetPrice(int price){
-    this->itemPrice=price;
+    itemPrice=price;
+    return;
 }
 int ItemToPurchase::GetPrice(){
     return itemPrice;
 }
 
-void ItemToPurchase::SetQuantity(int quan){
-    this->itemQuantity=quan;
+void ItemToPurchase::SetQuantity(int quantity){
+    itemQuantity=quantity;
 }
 int ItemToPurchase::GetQuantity(){
     return itemQuantity;

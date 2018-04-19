@@ -24,6 +24,7 @@ class ItemToPurchase
 {
     public:
     ItemToPurchase();
+    ItemToPurchase(string name, string description, int price, int quantity = 1);
     void SetName(string name);
     string GetName();
 
@@ -33,8 +34,15 @@ class ItemToPurchase
     void SetQuantity(int itemQuantity);
     int GetQuantity();
 
+    void PrintItemCost();
+    void PrintItemDescription();
+
+    void SetDescription(string description);
+    string GetDescripion();
+
     private:
     string itemName;
+    string itemDescription;
     int itemPrice;
     int itemQuantity;
 };
