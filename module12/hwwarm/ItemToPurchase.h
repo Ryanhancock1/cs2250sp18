@@ -37,7 +37,7 @@ class ItemToPurchase
     string itemName;
     int itemPrice;
     int itemQuantity;
-}
+};
 
 #endif /* ----- #ifndef ITEMTOPURCHASE__INC__ ----- */
 

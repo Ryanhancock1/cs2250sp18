@@ -40,10 +40,10 @@ int main()
     cout<<"Enter the item price:\n";
     cin>>price;
     cout<<"Enter the item quantity:\n";
-    cin>>quan;
+    cin>>quantity;
     item1.SetName(name1);
     item1.SetPrice(price);
-    item1.SetQuantity(quan);
+    item1.SetQuantity(quantity);
     cout<<endl;
     cout<<"Item 2"<<endl;
     cout<<"Enter the item name:\n";
@@ -51,10 +51,10 @@ int main()
     cout<<"Enter the item price:\n";
     cin>>price;
     cout<<"Enter the item quantity:\n";
-    cin>>quan;
+    cin>>quantity;
     item2.SetName(name2);
     item2.SetPrice(price);
-    item2.SetQuantity(quan);
+    item2.SetQuantity(quantity);
     cout<<endl;
 
     cout<<"TOTAL COST"<<endl;
