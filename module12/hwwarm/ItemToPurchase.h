@@ -27,7 +27,7 @@ class ItemToPurchase
     ItemToPurchase();
     ItemToPurchase(string name, string description, int price, int quantity = 1);
     void SetName(string name);
-    string GetName();
+    string GetName()const;
 
     void SetPrice(int itemPrice);
     int GetPrice();
@@ -35,11 +35,11 @@ class ItemToPurchase
     void SetQuantity(int itemQuantity);
     int GetQuantity();
 
+    void SetDescription(string description);
+    string GetDescription()const ;
+
     void PrintItemCost();
     void PrintItemDescription();
-
-    void SetDescription(string description);
-    string GetDescripion();
 
     private:
     string itemName;
