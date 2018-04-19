@@ -18,11 +18,11 @@
 #ifndef  ITEMTOPURCHASE__INC__
 #define  ITEMTOPURCHASE_INC__
 #include <iostream>
-using namespace.std;
+using namespace std;
 
 class ItemToPurchase
 {
-    Public:
+    public:
     ItemToPurchase();
     void SetName(string name);
     string GetName();
@@ -33,7 +33,7 @@ class ItemToPurchase
     void SetQuantity(int itemQuantity);
     int GetQuantity();
 
-    Private:
+    private:
     string itemName;
     int itemPrice;
     int itemQuantity;
