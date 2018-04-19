@@ -34,7 +34,7 @@ class ItemToPurchase
 
     void SetQuantity(int itemQuantity);
     int GetQuantity();
-
+          
     void SetDescription(string description);
     string GetDescription();
 
