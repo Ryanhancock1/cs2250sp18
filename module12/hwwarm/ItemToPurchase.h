@@ -18,6 +18,7 @@
 #ifndef  ITEMTOPURCHASE__INC__
 #define  ITEMTOPURCHASE_INC__
 #include <iostream>
+#include <string>
 using namespace std;
 
 class ItemToPurchase
