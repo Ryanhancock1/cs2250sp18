@@ -33,7 +33,7 @@ ShoppingCart::ShoppingCart(string name, string date)
     customerName = name;
     currentDate = date;
 }
-tring ShoppingCart::GetCustomerName(){
+string ShoppingCart::GetCustomerName(){
     return customerName;
 }
 string ShoppingCart::GetDate(){
