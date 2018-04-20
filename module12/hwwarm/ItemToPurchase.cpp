@@ -48,5 +48,22 @@ void ItemToPurchase::SetQuantity(int quantity){
 int ItemToPurchase::GetQuantity(){
     return itemQuantity;
 }
+void itemToPurchase::SetDescription(string desc){
+        itemDescription = desc;
+}
+string ItemToPurchase::GetDescription(){
+        return itemDescription;
+}
 
-
+void ItemToPurchase::PrintItemCost(){
+        cout<<itemName<<" "<<itemQuantity<<" @ $"<<itemPrice<<" = $"<<(itemQuantity * itemPrice)<<endl;
+}
+void ItemToPurchase::PrintItemDescription(){
+    cout<<itemName<<": "<<itemDescription<<endl;
+}
+ItemToPurchase::ItemToPurchase(string name, string descr, int price, int quantity){
+    itemName = name;
+    itemDescription = descr;
+    itemPrice =  price;
+    itemQuantity = quantity;
+}

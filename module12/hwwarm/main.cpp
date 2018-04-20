@@ -97,8 +97,8 @@ char PrintMenu(ShoppingCart& theCart);
                     cout << "Enter the item quantity:" << endl;
                     cin >> quantity;
 
-                    //ItemToPurchase newItem(name, descr, price, quantity);
-                    //theCart.AddItem(newItem);
+                    ItemToPurchase newItem(name, descr, price, quantity);
+                    theCart.AddItem(newItem);
 
                     menuOp = ' ';
                     cout << endl;
@@ -112,7 +112,7 @@ char PrintMenu(ShoppingCart& theCart);
                 cout << "Enter name of item to remove:" << endl;
                 getline(cin, name);
 
-                // theCart.RemoveItem(name);
+                theCart.RemoveItem(name);
 
                 menuOp = ' ';
                 cout << endl;
@@ -129,11 +129,11 @@ char PrintMenu(ShoppingCart& theCart);
                     cout << "Enter the new quantity:" << endl;
                     cin >> quantity;
 
-                    // ItemToPurchase item;
-                    // item.SetName(name);
-                    // item.SetQuantity(quantity);
+                    ItemToPurchase item;
+                     item.SetName(name);
+                     item.SetQuantity(quantity);
 
-                    // theCart.ModifyItem(item);
+                     theCart.ModifyItem(item);
 
                     menuOp = ' ';
                     cout << endl;
@@ -142,7 +142,7 @@ char PrintMenu(ShoppingCart& theCart);
 
             case 'i':
                 cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
-                //theCart.PrintDescriptions();
+                theCart.PrintDescriptions();
 
                 menuOp = ' ';
                 cout << endl;
@@ -150,7 +150,7 @@ char PrintMenu(ShoppingCart& theCart);
 
             case 'o':
                 cout << "OUTPUT SHOPPING CART" << endl; 
-                //theCart.PrintTotal();
+                theCart.PrintTotal();
 
                 menuOp = ' ';
                 cout << endl;
